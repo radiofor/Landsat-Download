@@ -52,7 +52,7 @@ class GoogleTask(object):
 
     @staticmethod
     def __list(download_info):
-        print('The following data was searched:')
+        print('\nThe following data was searched:')
         for key in download_info.keys():
             print(key)
 
