@@ -46,24 +46,25 @@ class GoogleTask(object):
         for scene_id in scene_ids:
             download_info[scene_id] = self.__get_urls(scene_id)
         self.__list(download_info)
-        print('Download Now? [y/n]:')
+        print('Download Now? [y/n]:', end='')
         if input() is 'y':
             self.__download(download_info)
 
     @staticmethod
     def __list(download_info):
+        print('The following data was searched:')
         for key in download_info.keys():
             print(key)
 
     def __download(self, download_info):
         for key in download_info.keys():
-            print('<-*->{}<-*->'.format(key))
+            print('\n<-*->{}<-*->'.format(key))
             out_path = os.path.join(self.out_path, key)
             if os.path.isdir(out_path):
                 shutil.rmtree(out_path)
             os.mkdir(out_path)
             for url in download_info[key]:
-                print('Downloading {}'.format(url))
+                print('\nDownloading {}'.format(url))
                 file_name = os.path.basename(url)
                 response = get(url, stream=True)
                 if response.status_code != 200:
