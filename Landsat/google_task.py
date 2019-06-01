@@ -40,7 +40,7 @@ class GoogleTask(object):
             exit(0)
 
         if not scene_ids:
-            print('No suitable data be found!')
+            print('\nNo suitable data be found!')
             exit(0)
         download_info = {}
         for scene_id in scene_ids:
