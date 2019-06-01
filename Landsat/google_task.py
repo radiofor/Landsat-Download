@@ -65,14 +65,14 @@ class GoogleTask(object):
             os.mkdir(out_path)
             for url in download_info[key]:
                 print('\nDownloading {}'.format(url))
-                file_name = os.path.basename(url)
+                file_path = os.path.join(out_path, os.path.basename(url))
                 response = get(url, stream=True)
                 if response.status_code != 200:
                     print('Bad response {} from request.'.format(response.status_code))
                     continue
 
                 content_size = int(response.headers['content-length']) / pow(1024, 2)
-                with open(file_name, 'wb') as f:
+                with open(file_path, 'wb') as f:
                     chunk_now = 0
                     for chunk in response.iter_content(chunk_size=1024):
                         if chunk:
