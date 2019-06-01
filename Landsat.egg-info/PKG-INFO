@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: Landsat
+Version: 1.0
+Summary: Very simple API to download Landsat data from Landsat 1 - 5, 7, and 8 from Google
+Home-page: https://github.com/radiofor
+Author: Viktor Xu
+Author-email: x572722344@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires: pandas
+Requires: GDAL
+Requires: requests
+Requires: click

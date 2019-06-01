@@ -1,0 +1,6 @@
+[console_scripts]
+landsat_id = Landsat.command_scene_id:submit
+landsat_lon_lat = Landsat.command_lon_lat:submit
+landsat_path_row = Landsat.command_path_row:submit
+landsat_update_list = Landsat.command_update_list:submit
+
