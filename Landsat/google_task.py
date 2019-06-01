@@ -87,7 +87,7 @@ class GoogleTask(object):
         urls = []
         for suffix in file_name.suffixes:
             url = os.path.join(url_header, file_name.category, 'PRE', file_name.path, file_name.row, file_name.id,
-                               file_name.id + suffix)
+                               file_name.id + '_' + suffix)
             url = url.replace('\\', '/')
             urls.append(url)
         return urls
