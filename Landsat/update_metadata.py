@@ -19,7 +19,7 @@ WRS_DIR = 'wrs'
 
 
 def update_list():
-    print('Updating the Landsat data list...')
+    print('\nUpdating the Landsat data list...')
     if os.path.isdir(LISTS_DIR):
         shutil.rmtree(LISTS_DIR)
     os.mkdir(LISTS_DIR)
@@ -65,7 +65,7 @@ def split_lists():
 
 
 def download_wrs():
-    print('Configuring WRS reference data...')
+    print('\nConfiguring WRS reference data...')
     if os.path.isdir(WRS_DIR):
         shutil.rmtree(WRS_DIR)
     os.mkdir(WRS_DIR)
